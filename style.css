@@ -6,6 +6,7 @@ body {
     font-family: arial;
     background: #161616;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 /*NAVBAR*/
@@ -279,11 +280,11 @@ hr {
 /*HALAMAN 4*/
 .card-contact {
     background: #7e7d7d77;
-    width: 280px;
-    height: 370px;
+    width: 275px;
+    height: 375px;
     border-radius: 10px;
     padding: 5px;
-    margin-top: -100px;
+    margin-top: -420px;
     margin-left: 800px;
 }
 
@@ -291,24 +292,26 @@ hr {
     background: #abaaaa70;
     border: 1px solid #abaaaa70;
     border-radius: 8px;
-    width: 260px;
-    height: 25px;
-    padding: 5px;
+    width: 240px;
+    height: 10px;
+    padding: 10px;
     margin: 4px;
     color: #ffffff;
     font-size: 15px;
 }
 
-.card-contact .massage {
+.card-contact textarea {
     background: #abaaaa70;
     border: 1px solid #abaaaa70;
     border-radius: 8px;
-    width: 260px;
+    width: 230px;
     height: 200px;
     padding: 5px;
     margin: 4px;
     color: #ffffff;
     font-size: 15px;
+    resize: none;
+    padding: 15px;
 }
 
 .card-contact button {
@@ -317,8 +320,8 @@ hr {
     padding: 10px 110px;
     border-radius: 20px;
     font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
+    margin-top: 5px;
+    margin-left: 3px;
 }
 
 .card-contact input:focus {
@@ -327,19 +330,19 @@ hr {
 
 .data::placeholder {
     color: #cfcfcf;
-    padding: 10px;
 }
 
-.massage::placeholder {
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
     color: #cfcfcf;
-    position: absolute;
-    margin-left: 10px;
-    margin-top: -90px;
 }
 
 #contact h1 {
     color: #cfcfcf;
-    font-size: 70px;
+    font-size: 100px;
     margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 90px;
@@ -353,6 +356,24 @@ hr {
 }
 
 .ikon {
-    
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.ikon span {
+    color: #cfcfcf;
+    padding: 10px;
+}
+
+.ikon img {
+    width: 50px;
+    border-radius: 20px;
 }
 /*END HALAMAN 4*/
+
+/*TRANSISI*/
+section {
+    
+}
