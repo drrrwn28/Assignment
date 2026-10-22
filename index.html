@@ -22,7 +22,7 @@
     <nav>
         <ul>
             <li>
-                <a href="#home" class="active">Home</a>
+                <a href="#home">Home</a>
             </li>
             <li>
                 <a href="#me">About Me</a>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="foto">
-                <img src="">
+                <img src="pp.png">
             </div>
             <br>
         </section>
@@ -148,6 +148,20 @@
 
         </section>
     </div>
+    <script>
+        const menu = document.querySelectorAll("nav a");
+
+        menu.forEach(item => {
+            item.addEventListener("click", function () {
+
+                menu.forEach(link => {
+                    link.classList.remove("active");
+                });
+
+                this.classList.add("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
