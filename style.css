@@ -157,6 +157,9 @@ hr {
 /*END HALAMAN 1*/
 
 /*HALAMAN 2*/
+#me {
+    margin-left: 30px;
+}
 #me hr {
     margin-bottom: 50px;
 }
