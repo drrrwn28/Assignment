@@ -41,7 +41,7 @@ nav a:hover {
     color: #ffffff;
 }
 
-.active {
+nav a.active {
     border-bottom: solid 1px;
     padding: 10px 1px;
     color: #ffffff;
@@ -191,7 +191,10 @@ hr {
     position: absolute;
     margin-top: -520px;
     margin-left: 750px;
+}
 
+.foto img {
+    width: 370px;
 }
 
 /*END HALAMAN 2*/
