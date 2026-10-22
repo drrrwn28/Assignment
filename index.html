@@ -56,10 +56,11 @@
             </div>
             <div class="button">
                 <button class="view"
-                    onclick="document.getElementById('project').scrollIntoView({behaVior:'smooth'})">VIEW
+                    onclick="document.getElementById('project').scrollIntoView({behaVior:'smooth', block:'start'})">VIEW
                     PROJECT</button>
                 <button class="talk"
-                    onclick="document.getElementById('contact').scrollIntoView({behaVior:'smooth'})">LET'S TALK</button>
+                    onclick="document.getElementById('contact').scrollIntoView({behaVior:'smooth', block:'start'})">LET'S
+                    TALK</button>
             </div>
         </section>
 
@@ -170,7 +171,7 @@
             let email = document.getElementById('email').value;
             let pesan = document.getElementById('massage').value;
 
-            if (nama == "" || email ==="" || pesan =="") {
+            if (nama == "" || email === "" || pesan == "") {
                 alert("Harap isi terlebih dahulu")
             }
 
@@ -181,6 +182,35 @@
                 document.getElementById("massage").value = "";
             }
         }
+
+
+        const sections = document.querySelectorAll("section");
+        const menus = document.querySelectorAll("nav a");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    menus.forEach((menu) => {
+                        menu.classList.remove("active");
+                    });
+
+                    const activeMenu = document.querySelector(
+                        `nav a[href="#${entry.target.id}"]`
+                    );
+
+                    if (activeMenu) {
+                        activeMenu.classList.add("active");
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
     </script>
 </body>
 
