@@ -55,8 +55,11 @@
                 <p>and Interactive Design</p>
             </div>
             <div class="button">
-                <button class="view">VIEW PROJECT</button>
-                <button class="talk">LET'S TALK</button>
+                <button class="view"
+                    onclick="document.getElementById('project').scrollIntoView({behaVior:'smooth'})">VIEW
+                    PROJECT</button>
+                <button class="talk"
+                    onclick="document.getElementById('contact').scrollIntoView({behaVior:'smooth'})">LET'S TALK</button>
             </div>
         </section>
 
@@ -138,10 +141,10 @@
 
 
             <div class="card-contact">
-                <input class="data" type="text" placeholder="Name">
-                <input class="data" type="email" placeholder="Email">
-                <textarea placeholder="Massage"></textarea>
-                <button class="send">Sumbit</button>
+                <input class="data" id="name" type="text" placeholder="Name">
+                <input class="data" id="email" type="email" placeholder="Email">
+                <textarea id="massage" placeholder="Massage"></textarea>
+                <button onclick="kirimDanHapusPesan()">Sumbit</button>
             </div>
 
 
@@ -161,6 +164,23 @@
                 this.classList.add("active");
             });
         });
+
+        function kirimDanHapusPesan() {
+            let nama = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let pesan = document.getElementById('massage').value;
+
+            if (nama == "" || email ==="" || pesan =="") {
+                alert("Harap isi terlebih dahulu")
+            }
+
+            else {
+                alert("Permintaan Telah Terkirim");
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("massage").value = "";
+            }
+        }
     </script>
 </body>
 
