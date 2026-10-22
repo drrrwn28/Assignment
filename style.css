@@ -144,9 +144,6 @@ hr {
     border: 1px solid #6c6b6b;
 }
 
-.view:hover {
-    transition: ;
-}
 
 .talk {
     background: none;
@@ -378,8 +375,3 @@ textarea::placeholder {
     border-radius: 20px;
 }
 /*END HALAMAN 4*/
-
-/*TRANSISI*/
-section {
-    
-}
